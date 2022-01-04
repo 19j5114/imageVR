@@ -13,7 +13,7 @@
     <a-assets>
       <!--初期画像-->
       <img id="img" src="image/kyoukai.jpg" preload="auto">
-      <!--<audio id="audio" src="audio/kyoukai_1.m4a" preload="auto" autoplay="true"></audio>-->
+      <audio id="audio" src="audio/kyoukai_1.m4a" preload="auto"></audio>
     </a-assets>
 
     <!-- 画像の変更を行う場合はこっちのidで -->
@@ -31,7 +31,7 @@
     
     <!-- 再生・停止ボタンを押すための視線カーソル（スマホ用） -->
     <a-camera>
-      <a-cursor fuse="true" fuse-timeout="1000"></a-cursor>
+      <a-cursor fuse="true"></a-cursor>
     </a-camera>
   </a-scene>
 
@@ -46,7 +46,6 @@
     <script>//ボタン
       const btnPlay = document.getElementById("play");  // 再生ボタンの取得
       btnPlay.addEventListener("click", (e) => {        // クリックされたら
-        var audio = new Audio('audio/kyoukai_1.m4a');
         audio.play();
       });
       const btnStop = document.getElementById("stop");  // 停止ボタンの取得
