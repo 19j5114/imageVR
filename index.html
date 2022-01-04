@@ -13,7 +13,7 @@
     <a-assets>
       <!--初期画像-->
       <img id="img" src="image/kyoukai.jpg" preload="auto">
-      <audio id="audio" src="audio/kyoukai_1.m4a" preload="auto"></audio>
+      <audio id="audio" src="audio/kyoukai_1.m4a" preload="auto" autoplay="true"></audio>
     </a-assets>
 
     <!-- 画像の変更を行う場合はこっちのidで -->
@@ -46,17 +46,16 @@
     <script>//ボタン
       const btnPlay = document.getElementById("play");  // 再生ボタンの取得
       btnPlay.addEventListener("click", (e) => {        // クリックされたら
-        audio.setAttribute("src", "audio/kyoukai_1.m4a"); //音声の切り替え
-        audio.setAttribute('autoplay', 'true');
+        audio.play();
       });
       const btnStop = document.getElementById("stop");  // 停止ボタンの取得
       btnStop.addEventListener("click", (e) => {        // クリックされたら
-
+        audio.pause();
       });
       const btnRepeat = document.getElementById("link"); // ボタンの取得
       btnRepeat.addEventListener("click", (e) => {       // クリックされたら
         image.setAttribute("src", "image/kyoukai.jpg"); 
-        audio.stop();
+        audio.pause();
         //sound.setAttribute("src", "audio/");
         if (sphereFlag == 0) {
           setSphere();
