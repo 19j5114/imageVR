@@ -48,7 +48,7 @@
 
     <script>//ボタン
       const btnPlay = document.getElementById("play");  // 再生ボタンの取得
-      btnPlay.addEventListener("click", (e) => {        // クリックされたら
+      btnPlay.addEventListener("touchstart", (e) => {        // クリックされたら
         audio.play();
       });
       const btnStop = document.getElementById("stop");  // 停止ボタンの取得
