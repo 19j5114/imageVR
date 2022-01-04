@@ -13,7 +13,7 @@
     <a-assets>
       <!--初期画像-->
       <img id="img" src="image/kyoukai.jpg" preload="auto">
-      <audio id="audio" src="audio/kyoukai_1.m4a" autoplay="true" preload="auto"></audio>
+      <audio id="audio" src="audio/kyoukai_1.m4a" preload="auto"></audio>
     </a-assets>
 
     <!-- 画像の変更を行う場合はこっちのidで -->
@@ -44,10 +44,10 @@
     </script>
 
     <script>//ボタン
-      audio.play();
       const btnPlay = document.getElementById("play");  // 再生ボタンの取得
       btnPlay.addEventListener("click", (e) => {        // クリックされたら
-        audio.play();
+        audio.setAttribute("src", "audio/kyoukai_1.m4a"); //音声の切り替え
+        audio.setAttribute('autoplay', 'true');
       });
       const btnStop = document.getElementById("stop");  // 停止ボタンの取得
       btnStop.addEventListener("click", (e) => {        // クリックされたら
